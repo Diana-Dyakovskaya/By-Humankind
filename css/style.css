@@ -625,7 +625,7 @@ main .plea .plea__grid .plea__content a {
 }
 
 main .routine {
-  background: url("../img/future.jpg") no-repeat;
+  background: url("./img/future.jpg") no-repeat;
   padding-bottom: 220px;
 }
 
