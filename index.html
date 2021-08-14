@@ -9,36 +9,43 @@
 </head>
 <body>
    <header>
-      <nav>
-         <ul class="nav-list-1">
-            <li><a href="#">Shop All</a></li>
-            <li><a href="#">Save on Sets</a></li>
-            <li><a href="#">Plastic Offsets</a></li>
+      <div class="header__flex">
+         <nav>
+            <ul class="header__list">
+               <li><a href="#">Shop All</a></li>
+               <li><a href="#">Save on Sets</a></li>
+               <li><a href="#">Plastic Offsets</a></li>
+            </ul>
+         </nav>
+         <a href="#" class="header__logo"><i>by</i> Humankind</a>
+         <ul class="header_button">
+            <li><button type="button">Free shipping,<span>always.</span></button></li>
+            <li><button type="button">Account</button></li>
+            <li><button type="button">Cart</button></li>
          </ul>
-         <h1><a href="#"><i>by</i> Humankind</a></h1>
-         <ul class="nav-list-2">
-            <li><a href="#">Free shipping,<span>always.</span></a></li>
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Cart</a></li>
-         </ul>
-      </nav>
+      </div>
    </header>
    <main>
-      <section class="best-selling">
-         <img src="./img/best-selling.jpg" alt="best-selling">
-         <div class="best-selling__title">
-            <p class="best-selling__text">Our best-selling refillable deodorant, in a new scent for summer.<br>
+      <div class="home-intro divider">
+         <div class="home-intro__slider">
+            <div class="home-intro__image">
+               <img src="./img/best-selling.jpg" alt="best-selling">
+            </div>
+            <div class="home-intro__content">
+               <p class="home-intro__text">Our best-selling refillable deodorant, in a new scent for summer.<br>
                Shop Lemongrass
-            </p>
-            <button type="button">Shop Now</button>
+               </p>
+               <button type="button">Shop Now</button>
+            </div>
          </div>
-         <p class="best-selling__slider">
+         <p class="home-intro__plugin">
             <span class="button-1"></span>
             <span class="button-2"></span>
             <span class="button-3"></span>
          </p>
-      </section>
-      <section class="catalog">
+      </div>
+      <section class="catalog divider container">
+         <h2 class="visually-hidden">Сatalog of our products</h2>
          <p class="catalog__text">Designed to reduce single-use plastic waste in your daily routine. Scientifically-proven to perform.</p>
          <ul class="catalog__list list">
             <li class="catalog__item item">
@@ -67,7 +74,7 @@
             </li>
          </ul>
       </section>
-      <section class="signing">
+      <section class="signing divider  container">
          <div class="signing__grid">
             <img src="./img/new.jpg" alt="new products">
             <div class="signing__content">
@@ -76,7 +83,7 @@
             </div>
          </div>
       </section>
-      <section class="plastic">
+      <section class="plastic divider container">
          <div class="plastic__grid">
             <div class="plastic__content">
                <div class="plastic__text">
@@ -88,7 +95,7 @@
             <img src="./img/plastic.jpg" alt="Plastic">
          </div>
       </section>
-      <section class="ingredients">
+      <section class="ingredients divider container">
          <div class="ingredients__grid">
             <img src="./img/ingredients.jpg" alt="ingredients">
             <div class="ingredients__content">
@@ -100,18 +107,20 @@
             </div>
          </div>
       </section>
-      <section class="vogue">
-         <div class="vogue__title">
-            <h2 class="vogue__subtitle lowercase">Teen Vogue</h2>
-         <p class="vogue__text">"Beautifully designed bathroom essentials in solid, no-waste packaging and refillable containers."</p>
-         <a href="#" class="lowercase">See All Press</a>
-         <p class="vogue__slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-         </p>
+      <section class="vogue divider container">
+         <div class="vogue__intro">
+            <div class="vogue__blockqoute">
+               <h2 class="vogue__title lowercase">Teen Vogue</h2>
+               <blockquote cite="#" class="vogue__text">"Beautifully designed bathroom essentials in solid, no-waste packaging and refillable containers."</blockquote>
+            </div>
+            <a href="#" class="lowercase">See All Press</a>
+            <p class="vogue__plugin">
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+            </p>
          </div>
          <ul class="vogue__list list">
             <li class="vogue__item item">
@@ -140,8 +149,10 @@
             </li>
          </ul>
       </section>
-      <b>“The shampoo bar works so freaking good and smells amazing!”</b>
-      <section class="plea">
+      <div class="divider">
+         <b>“The shampoo bar works so freaking good and smells amazing!”</b>
+      </div>
+         <section class="plea container">
          <div class="plea__grid">
             <img src="./img/help.jpg" alt="">
             <div class="plea__content">
@@ -153,15 +164,16 @@
             </div>
          </div>
       </section>
-      <div class="routine">
-         <b>One routine can help shape our planet's future — <i>yours</i>.</b>
-         <a href="#">Shop Now</a>
-      </div>
+         <div class="routine">
+            <blockquote>One routine can help shape our planet's future — <i>yours</i>.</blockquote>
+            <a href="#">Shop Now</a>
+         </div>
+         <div class="divider container"></div>
    </main>
-   <footer>
-      <section class="about-us">
-         <div class="about-us__help">
-            <h4>Help - </h4>
+   <footer class="container">
+      <div class="site-nav">
+         <div class="site-nav__help">
+            <h2>Help - </h2>
             <ul>
                <li><a href="#">FAQ</a></li>
                <li><a href="#">Your Account</a></li>
@@ -169,16 +181,16 @@
                <li><a href="#">Text Us</a></li>
             </ul>
          </div>
-         <div class="about-us__connect">
-            <h4>Connect - </h4>
+         <div class="site-nav__section">
+            <h2>Connect - </h2>
             <ul>
                <li><a href="#">Careers</a></li>
                <li><a href="#">Wholesale</a></li>
                <li><a href="#">Press</a></li>
             </ul>
          </div>
-         <div class="about-us__info">
-            <h4>Info - </h4>
+         <div class="site-nav__section">
+            <h2>Info - </h2>
             <ul>
                <li><a href="#">Returns + Guarantee</a></li>
                <li><a href="#">Terms of Use</a></li>
@@ -186,15 +198,15 @@
                <li><a href="#">Accessibility</a></li>
             </ul>
          </div>
-         <div class="about-us__community">
-            <h4>Community - </h4>
+         <div class="site-nav__section">
+            <h2>Community - </h2>
             <ul>
                <li><a href="#">Instagram</a></li>
                <li><a href="#">Twitter</a></li>
                <li><a href="#">Facebook</a></li>
             </ul>
          </div>
-      </section>
+      </div>
       <p class="footer-info__logo"><i>by</i> Humankind</p>
       <div class="footer-info">
          <p class="footer-info__by">© 2021 By Humankind, Inc</p>
