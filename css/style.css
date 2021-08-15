@@ -129,49 +129,65 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #006450;
 }
 
-footer .site-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  font-size: 15px;
-  line-height: 20px;
-  margin: 0 25px;
-}
-footer .site-nav h2 {
-  font-style: italic;
-  margin-bottom: 18px;
-}
-footer .site-nav a {
+.footer {
+  padding-bottom: 25px;
   color: #006450;
 }
-footer .footer-info__logo {
+.footer__bottom {
+  margin-top: 60px;
+}
+
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.site-nav__section-title {
+  font-style: italic;
+}
+.site-nav__section-title + * {
+  margin-top: 18px;
+}
+.site-nav__section-list a {
+  font-size: 15px;
+  line-height: 20px;
+  color: #006450;
+  letter-spacing: 0.4px;
+}
+
+.footer-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer-info__copy {
+  flex: 1 1 auto;
+}
+.footer-info .footer-info__email {
+  background-color: #FFFAEF;
+}
+.footer-info .footer-info__logo {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
   font-size: 30px;
   color: #00C08B;
   line-height: 30px;
-  text-align: center;
-  margin-top: 45px;
+  transform: translateX(-50%);
 }
-footer .footer-info__logo i {
+.footer-info .footer-info__logo i {
   font-size: 25px;
   font-style: italic;
 }
-footer .footer-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  line-height: 20px;
-  margin: 0 25px;
-  margin-top: -17px;
-  padding-bottom: 20px;
+.footer-info__action {
+  margin-left: 90px;
 }
-footer .footer-info .footer-info__by {
-  flex: 1 1 auto;
-}
-footer .footer-info .footer-info__sub {
-  margin-right: 90px;
-  background-color: #FFFAEF;
-}
-footer .footer-info button {
+.footer-info__action button {
   border: none;
   background-color: white;
   color: #006450;
@@ -179,10 +195,10 @@ footer .footer-info button {
   font-size: 12px;
 }
 @media (max-width: 992px) {
-  footer .footer-info {
+  .footer-info {
     margin-top: 0;
   }
-  footer .footer-info .footer-info__sub {
+  .footer-info .footer-info__sub {
     margin-right: 7%;
   }
 }
