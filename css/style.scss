@@ -74,6 +74,19 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: lowercase;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+._mt-50 {
+  margin-top: 50px;
+}
+
 /*---------custom-----------*/
 
 .header {
@@ -132,13 +145,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.divider::after {
-  content: '';
+.divider {
   display: block;
-  margin: 25px 0;
-  max-width: 100%;
-  height: 2px;
-  background-color: #006450;
+  max-width: 1440px;
+  margin: 25px auto;
+  padding: 0 25px;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #006450;
+  }
+
+  .container & {
+    padding: 0;
+  }
 }
 
 .footer {
@@ -226,64 +248,213 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-main {
-  .home-intro {
+.home-intro {
+  position: relative;
+
+  &__slider {
     position: relative;
+    /* Не получилось, оставила для примера
+    .home-intro__image{
+       min-height: 100vh;
+       position: relative;
+       img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          max-width: 100%;
+          max-height: 100%;
+       }
+    }
+    */
+  }
 
-    .home-intro__slider {
-      position: relative;
-      /* Не получилось, оставила для примера
-      .home-intro__image{
-         min-height: 100vh;
-         position: relative;
-         img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            max-width: 100%;
-            max-height: 100%;
-         }
-      }
-      */
-      .home-intro__content {
-        display: flex;
-        position: absolute;
-        z-index: 2;
-        left: 0;
-        width: 100%;
-        top: 20%;
-        padding: 0 25px;
-        justify-content: space-between;
-        align-items: center;
+  &__content {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    top: 20%;
+    padding: 0 25px;
+    justify-content: space-between;
+    align-items: center;
 
-        .home-intro__text {
-          color: #FFFAEF;
-          line-height: 44px;
-        }
+    button {
+      height: 65px;
+      width: 200px;
+      justify-self: end;
+      background-color: #E1FF32;
+      border: none;
+      color: #000000;
+      font-size: 18px;
+    }
+  }
 
-        button {
-          height: 65px;
-          width: 200px;
-          justify-self: end;
-          background-color: #E1FF32;
-          border: none;
-          color: #000000;
-          font-size: 18px;
-        }
-      }
+  &__text {
+    color: #FFFAEF;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+    letter-spacing: 0.4px;
+  }
+
+  &__plugin {
+    display: flex;
+    position: absolute;
+    right: 25px;
+    bottom: 50px;
+
+    span {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #FFFAEF;
+      margin-right: 6px;
     }
 
-    .home-intro__plugin {
+    span:last-child {
+      margin-right: 0;
+    }
+
+    span:nth-child(2) {
+      background-color: #FFFAEF;
+    }
+  }
+}
+
+
+/*Стили для каталогов*/
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  color: #FFFAEF;
+}
+
+.catalog-item {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    padding-top: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.4px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: lowercase;
+    color: #FFFAEF;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 26px;
+    max-width: 390px;
+  }
+
+  &__action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    button {
+      line-height: 60px;
+      font-size: 24px;
+      width: 100%;
+      text-align: center;
+      color: #3E3935;
+      background-color: #E1FF32;
+    }
+  }
+}
+
+/*----------------*/
+
+.home-catalog {
+  &__container {
+    padding-top: 60px;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.4px;
+    color: #006450;
+  }
+
+  &__list {
+    margin-top: 100px;
+  }
+}
+
+.home-vogue {
+  .vogue__intro {
+    position: relative;
+    margin-bottom: 50px;
+
+    .vogue__title {
+      color: #00C08B;
+      margin-top: 70px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .vogue__text {
+      max-width: 777px;
+      height: 250px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 56px;
+      line-height: 62px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 24px;
+      line-height: 16px;
+      color: #006450;
+      margin-left: 25px;
+      margin-top: 110px;
+    }
+
+    .vogue__plugin {
       display: flex;
       position: absolute;
-      right: 25px;
-      bottom: 50px;
+      right: 47%;
+      bottom: 7px;
 
       span {
-        width: 12px;
-        height: 12px;
-        border: 1px solid #FFFAEF;
-        margin-right: 6px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #006450;
+        margin-right: 8px;
       }
 
       span:last-child {
@@ -291,285 +462,62 @@ main {
       }
 
       span:nth-child(2) {
-        background-color: #FFFAEF;
+        background-color: #006450;
       }
     }
   }
 
-  /*Стили для каталогов*/
-  .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    color: #FFFAEF;
-
-    .item {
-      position: relative;
-
-      h3 {
-        position: absolute;
-        left: 0;
-        top: 12px;
-        z-index: 2;
-        line-height: 44px;
-        width: 100%;
-        text-align: center;
-      }
-
+  .vogue__list {
+    .vogue__item {
       p {
-        position: absolute;
-        left: 0;
-        top: 67px;
-        z-index: 2;
-        line-height: 26px;
-        font-size: 24px;
-        text-align: center;
-        max-width: 390px;
-
-        span {
-          display: block;
-          text-align: right;
-        }
-      }
-
-      button {
-        position: absolute;
-        left: 0;
-        top: 91%;
-        z-index: 2;
-        line-height: 60px;
-        font-size: 24px;
-        width: 100%;
-        text-align: center;
-        color: #3E3935;
-        background-color: #E1FF32;
+        font-size: 22px;
       }
     }
   }
+}
 
-  /*----------------*/
-  .catalog {
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: 1px;
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-    }
+.home-blockquote {
+  padding: 75px 0 100px;
 
-    .catalog__text {
-      text-align: center;
-      max-width: 580px;
-      margin: 0 auto;
-      padding-top: 60px;
-      padding-bottom: 100px;
-    }
-
-  }
-
-  .signing {
-    .signing__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-
-      .signing__content {
-        display: grid;
-        grid-template-rows: 1fr 30px;
-
-        p {
-          font-size: 56px;
-          line-height: 62px;
-          text-align: center;
-          margin: auto 0;
-        }
-
-        button {
-          text-align: left;
-          font-size: 24px;
-          line-height: 16px;
-          background-color: white;
-          color: #006450;
-        }
-      }
-    }
-
-  }
-
-  .plastic {
-    .plastic__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-
-      .plastic__content {
-        display: grid;
-        grid-template-rows: 1fr 30px;
-
-        p:first-of-type {
-          margin-bottom: 55px;
-        }
-
-        a {
-          text-align: left;
-          font-size: 24px;
-          line-height: 16px;
-          color: #006450;
-        }
-      }
-    }
-  }
-
-  .ingredients {
-    .ingredients__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-
-      .ingredients__content {
-        display: grid;
-        grid-template-rows: 1fr 30px;
-
-        p:first-of-type {
-          margin-bottom: 45px;
-        }
-
-        a {
-          text-align: left;
-          font-size: 24px;
-          line-height: 16px;
-          color: #006450;
-        }
-      }
-    }
-  }
-
-  .vogue {
-    .vogue__intro {
-      position: relative;
-      margin-bottom: 50px;
-
-      .vogue__title {
-        color: #00C08B;
-        margin-top: 70px;
-        text-align: center;
-        margin-bottom: 25px;
-      }
-
-      .vogue__text {
-        max-width: 777px;
-        height: 250px;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 56px;
-        line-height: 62px;
-      }
-
-      a {
-        display: inline-block;
-        font-size: 24px;
-        line-height: 16px;
-        color: #006450;
-        margin-left: 25px;
-        margin-top: 110px;
-      }
-
-      .vogue__plugin {
-        display: flex;
-        position: absolute;
-        right: 47%;
-        bottom: 7px;
-
-        span {
-          width: 10px;
-          height: 10px;
-          border: 1px solid #006450;
-          margin-right: 8px;
-        }
-
-        span:last-child {
-          margin-right: 0;
-        }
-
-        span:nth-child(2) {
-          background-color: #006450;
-        }
-      }
-    }
-
-    .vogue__list {
-      .vogue__item {
-        p {
-          font-size: 22px;
-        }
-      }
-    }
-  }
-
-  b {
+  blockquote {
     display: block;
+    font-weight: bold;
     font-size: 72px;
     line-height: 89px;
     text-align: center;
-    height: 267px;
+    letter-spacing: 0.4px;
+    color: #006450;
     max-width: 830px;
     margin: 0 auto;
-    margin-top: 75px;
-    margin-bottom: 130px;
+  }
+}
+
+.home-routine {
+  margin-top: 50px;
+  background: url("../img/future.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 220px;
+
+  blockquote {
+    font-size: 56px;
+    line-height: 62px;
+    padding-top: 220px;
+    padding-bottom: 60px;
+    font-weight: bold;
+    max-width: 1130px;
+    text-align: center;
+    margin: 0 auto;
   }
 
-  .plea {
-    margin-bottom: 50px;
-
-    .plea__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-
-      .plea__content {
-        display: grid;
-        grid-template-rows: 1fr 30px;
-
-        p:first-of-type {
-          margin-bottom: 85px;
-        }
-
-        a {
-          text-align: left;
-          font-size: 24px;
-          line-height: 16px;
-          color: #006450;
-        }
-      }
-    }
-  }
-
-  .routine {
-    background: url("../img/future.jpg") no-repeat;
-    padding-bottom: 220px;
-
-    blockquote {
-      font-size: 56px;
-      line-height: 62px;
-      padding-top: 220px;
-      padding-bottom: 60px;
-      font-weight: bold;
-      max-width: 1130px;
-      text-align: center;
-      margin: 0 auto;
-    }
-
-    a {
-      display: block;
-      font-size: 18px;
-      line-height: 52px;
-      color: #006450;
-      width: 205px;
-      border: 2px solid #006450;
-      text-align: center;
-      margin: 0 auto;
-    }
+  a {
+    display: block;
+    font-size: 18px;
+    line-height: 52px;
+    color: #006450;
+    width: 205px;
+    border: 2px solid #006450;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
@@ -596,4 +544,71 @@ main {
   max-width: 1490px;
   padding: 0 25px;
   margin: 0 auto;
+}
+
+.article-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'img text';
+  gap: 25px;
+
+  &__img {
+    grid-area: img;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      padding-top: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+    color: #006450;
+  }
+
+  &__text {
+    font-size: 36px;
+    line-height: 44px;
+
+    > * + * {
+      margin-top: 80px;
+    }
+  }
+
+  &__action {
+    margin-top: auto;
+    font-size: 24px;
+    line-height: 16px;
+    color: #006450;
+  }
+
+  &--revert {
+    grid-template-areas: 'text img';
+  }
+
+  &--single {
+    .article-item__text {
+      margin-top: auto;
+      font-size: 56px;
+      line-height: 62px;
+    }
+  }
 }

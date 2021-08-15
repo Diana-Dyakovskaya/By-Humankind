@@ -29,7 +29,7 @@
           </ul>
         </nav>
         <div class="header__logo">
-          <a href="#"><i>by</i>  Humankind</a>
+          <a href="#"><i>by</i> Humankind</a>
         </div>
         <ul class="header__list">
           <li class="header__list-item">
@@ -46,10 +46,10 @@
     </div>
   </header>
   <main class="page__content">
-    <div class="home-intro divider">
+    <section class="home-intro">
       <div class="home-intro__slider">
         <div class="home-intro__image">
-          <img src="./img/best-selling.jpg" alt="best-selling">
+          <img loading="lazy" src="./img/best-selling.jpg" alt="best-selling">
         </div>
         <div class="home-intro__content">
           <p class="home-intro__text">Our best-selling refillable deodorant, in a new scent for summer.<br>
@@ -63,149 +63,209 @@
         <span class="button-2"></span>
         <span class="button-3"></span>
       </p>
-    </div>
-    <section class="catalog divider container">
-      <h2 class="visually-hidden">Сatalog of our products</h2>
-      <p class="catalog__text">Designed to reduce single-use plastic waste in your daily routine. Scientifically-proven
-        to
-        perform.</p>
-      <ul class="catalog__list list">
-        <li class="catalog__item item">
-          <h3 class="catalog__title lowercase">Shower Routine Set — $46</h3>
-          <p class="catalog__subtitle">All-natural shampoo, conditioner, body wash formulated to nourish your hair &
-            skin.
-            <br> <span>get $26 off.</span></p>
-          <img src="./img/shower.jpg" alt="Shower routine set">
-          <button class="add" type="button">Quick Add</button>
-        </li>
-        <li class="catalog__item item">
-          <h3 class="catalog__title lowercase">Summer Routine Set — $50</h3>
-          <p class="catalog__subtitle">Best sellers that are great for travel, including deodorant in our new Lemongrass
-            scent.<br> <span>get $15 off.</span></p>
-          <img src="./img/summer.jpg" alt="Summer routine set">
-          <button class="add" type="button">Quick Add</button>
-        </li>
-        <li class="catalog__item item">
-          <h3 class="catalog__title lowercase">Dental Routine Set — $36</h3>
-          <p class="catalog__subtitle">Toothpaste, mouthwash, and floss formulated for healthy teeth designed for a
-            healthy planet.<br> <span>get $9 off.</span></p>
-          <img src="./img/toothpaste.jpg" alt="Dental Routine Set">
-          <button class="add" type="button">Quick Add</button>
-        </li>
-        <li class="catalog__item item">
-          <h3 class="catalog__title lowercase">Hair Care Set — $35</h3>
-          <p class="catalog__subtitle">All natural shampoo and conditioner formulated to cleanse & hydrate your
-            hair.<br>
-            <span>get $15 off.</span></p>
-          <img src="./img/hair.jpg" alt="Hair Care Set">
-          <button class="add" type="button">Quick Add</button>
-        </li>
-      </ul>
     </section>
-    <section class="signing divider  container">
-      <div class="signing__grid">
-        <img src="./img/new.jpg" alt="new products">
-        <div class="signing__content">
-          <p>Get early access to new products by signing up for bH texts.</p>
-          <button class="lowercase" type="button">Sign Up for Texts</button>
+    <div class="container">
+      <div class="divider"></div>
+      <section class="home-catalog">
+        <h2 class="visually-hidden">Catalog of our products</h2>
+        <div class="home-catalog__container">
+          <p class="home-catalog__text">Designed to reduce single-use plastic waste in your daily routine.
+            Scientifically-proven
+            to
+            perform.</p>
+          <ul class="home-catalog__list catalog-list">
+            <li class="catalog-list__item catalog-item">
+              <div class="catalog-item__content">
+                <h3 class="catalog-item__title">Shower Routine Set — $46</h3>
+                <p class="catalog-item__text">
+                  All-natural shampoo, conditioner, body wash formulated to nourish your hair & skin.
+                  get $26 off.</p>
+              </div>
+              <img loading="lazy" class="catalog-item__img" src="./img/shower.jpg" alt="Shower routine set">
+              <div class="catalog-item__action">
+                <button class="add" type="button">Quick Add</button>
+              </div>
+            </li>
+            <li class="catalog-list__item catalog-item">
+              <div class="catalog-item__content">
+                <h3 class="catalog-item__title">Summer Routine Set — $50</h3>
+                <p class="catalog-item__text">
+                  Best sellers that are great for travel, including deodorant in our new Lemongrass
+                  scent. get $15 off.
+                </p>
+              </div>
+              <img loading="lazy" class="catalog-item__img" src="./img/summer.jpg" alt="Summer routine set">
+              <div class="catalog-item__action">
+                <button class="add" type="button">Quick Add</button>
+              </div>
+            </li>
+            <li class="catalog-list__item catalog-item">
+              <div class="catalog-item__content">
+                <h3 class="catalog-item__title">Dental Routine Set — $36</h3>
+                <p class="catalog-item__text">
+                  Toothpaste, mouthwash, and floss formulated for healthy teeth designed for a
+                  healthy planet. get $9 off.
+                </p>
+              </div>
+              <img loading="lazy" class="catalog-item__img" src="./img/toothpaste.jpg" alt="Dental routine set">
+              <div class="catalog-item__action">
+                <button class="add" type="button">Quick Add</button>
+              </div>
+            </li>
+            <li class="catalog-list__item catalog-item">
+              <div class="catalog-item__content">
+                <h3 class="catalog-item__title">Hair Care Set — $35</h3>
+                <p class="catalog-item__text">
+                  All natural shampoo and conditioner formulated to cleanse & hydrate your
+                  hair. get $15 off.
+                </p>
+              </div>
+              <img loading="lazy" class="catalog-item__img" src="./img/hair.jpg" alt="Hair Care set">
+              <div class="catalog-item__action">
+                <button class="add" type="button">Quick Add</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <div class="article-item article-item--single">
+        <div class="article-item__img">
+          <img loading="lazy" src="./img/new.jpg" alt="new products">
+        </div>
+        <div class="article-item__content">
+          <div class="article-item__text">
+            <p>Get early access to new products by signing up for bH texts.</p>
+          </div>
+          <a class="article-item__action lowercase" href="#">Sign Up for Texts</a>
         </div>
       </div>
-    </section>
-    <section class="plastic divider container">
-      <div class="plastic__grid">
-        <div class="plastic__content">
-          <div class="plastic__text">
+      <div class="divider"></div>
+      <div class="article-item article-item--revert">
+        <div class="article-item__img">
+          <img loading="lazy" src="./img/plastic.jpg" alt="plastic">
+        </div>
+        <div class="article-item__content">
+          <div class="article-item__text">
             <p class="lowercase">EVERY DAY, 28,000 TONS of single-use plastic is disposed into our oceans.</p>
             <p>Starting today, you can fight this flow of plastic waste, just by getting ready in the morning.</p>
           </div>
-          <a href="#" class="lowercase">The Plastic Crisis</a>
+          <a class="article-item__action lowercase" href="#">The Plastic Crisis</a>
         </div>
-        <img src="./img/plastic.jpg" alt="Plastic">
       </div>
-    </section>
-    <section class="ingredients divider container">
-      <div class="ingredients__grid">
-        <img src="./img/ingredients.jpg" alt="ingredients">
-        <div class="ingredients__content">
-          <div class="ingredients__text">
+      <div class="divider"></div>
+      <div class="article-item">
+        <div class="article-item__img">
+          <img loading="lazy" src="./img/ingredients.jpg" alt="ingredients">
+        </div>
+        <div class="article-item__content">
+          <div class="article-item__text">
             <p>Formulated with purpose, designed for impact.</p>
             <p>Our products are made with clean ingredients — sourced and formulated for your body and our planet.</p>
           </div>
-          <a href="#">learn more</a>
+          <a class="article-item__action lowercase" href="#">learn more</a>
         </div>
       </div>
-    </section>
-    <section class="vogue divider container">
-      <div class="vogue__intro">
-        <div class="vogue__blockqoute">
-          <h2 class="vogue__title lowercase">Teen Vogue</h2>
-          <blockquote cite="#" class="vogue__text">"Beautifully designed bathroom essentials in solid, no-waste
-            packaging
-            and refillable containers."
-          </blockquote>
+      <div class="divider"></div>
+      <div class="home-vogue">
+        <div class="vogue__intro">
+          <div class="vogue__blockqoute">
+            <h2 class="vogue__title lowercase">Teen Vogue</h2>
+            <blockquote cite="#" class="vogue__text">"Beautifully designed bathroom essentials in solid, no-waste
+              packaging
+              and refillable containers."
+            </blockquote>
+          </div>
+          <a href="#" class="lowercase">See All Press</a>
+          <p class="vogue__plugin">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </p>
         </div>
-        <a href="#" class="lowercase">See All Press</a>
-        <p class="vogue__plugin">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </p>
       </div>
-      <ul class="vogue__list list">
-        <li class="vogue__item item">
-          <h3 class="vogue__title lowercase">Toothpaste — $15</h3>
-          <p class="vogue__subtitle">100% natural toothpaste in tablet form, designed to polish and strengthen your
-            teeth
-            without the plastic waste.</p>
-          <img src="./img/toothpaste.jpg" alt="Toothpaste">
-          <button class="add" type="button">Quick Add</button>
+      <ul class="_mt-50 catalog-list">
+        <li class="catalog-list__item catalog-item">
+          <div class="catalog-item__content">
+            <h3 class="catalog-item__title">Toothpaste — $15</h3>
+            <p class="catalog-item__text">
+              100% natural toothpaste in tablet form, designed to polish and strengthen your
+              teeth without the plastic waste.
+            </p>
+          </div>
+          <img loading="lazy" class="catalog-item__img" src="./img/toothpaste.jpg" alt="Shower routine set">
+          <div class="catalog-item__action">
+            <button class="add" type="button">Quick Add</button>
+          </div>
         </li>
-        <li class="vogue__item item">
-          <h3 class="vogue__title lowercase">Deodorant — $15</h3>
-          <p class="vogue__subtitle">Natural, aluminum-free deodorant in a revolutionary, refillable container designed
-            to
-            reduce plastic waste.</p>
-          <img src="./img/deodorant.jpg" alt="Deodorant">
-          <button class="add" type="button">Quick Add</button>
+        <li class="catalog-list__item catalog-item">
+          <div class="catalog-item__content">
+            <h3 class="catalog-item__title">Deodorant — $15</h3>
+            <p class="catalog-item__text">
+              Natural, aluminum-free deodorant in a revolutionary, refillable container
+              designed to reduce plastic waste.
+            </p>
+          </div>
+          <img loading="lazy" class="catalog-item__img" src="./img/deodorant.jpg" alt="Summer routine set">
+          <div class="catalog-item__action">
+            <button class="add" type="button">Quick Add</button>
+          </div>
         </li>
-        <li class="vogue__item item">
-          <h3 class="vogue__title lowercase">Floss — $15</h3>
-          <p class="vogue__subtitle">100% biodegradable floss in a durable, refillable container designed to reduce the
-            single-use plastic in your oral care routine.</p>
-          <img src="./img/deodorant.jpg" alt="Floss">
-          <button class="add" type="button">Quick Add</button>
+        <li class="catalog-list__item catalog-item">
+          <div class="catalog-item__content">
+            <h3 class="catalog-item__title">Floss — $15</h3>
+            <p class="catalog-item__text">
+              100% biodegradable floss in a durable, refillable container designed to reduce
+              the single-use plastic in your oral care routine.
+            </p>
+          </div>
+          <img loading="lazy" class="catalog-item__img" src="./img/floss.jpg" alt="Dental routine set">
+          <div class="catalog-item__action">
+            <button class="add" type="button">Quick Add</button>
+          </div>
         </li>
-        <li class="vogue__item item">
-          <h3 class="vogue__title lowercase">Hand Sanitizer — $15</h3>
-          <p class="vogue__subtitle">A moisturizing hand sanitizer designed to reduce single-use plastic waste while on
-            the go. 65% alcohol.</p>
-          <img src="./img/sanitizer.jpg" alt="Hand Sanitizer">
-          <button class="add" type="button">Quick Add</button>
+        <li class="catalog-list__item catalog-item">
+          <div class="catalog-item__content">
+            <h3 class="catalog-item__title">Hand Sanitizer — $15</h3>
+            <p class="catalog-item__text">
+              A moisturizing hand sanitizer designed to reduce single-use plastic waste while
+              on the go. 65% alcohol.
+            </p>
+          </div>
+          <img loading="lazy" class="catalog-item__img" src="./img/sanitizer.jpg" alt="Hair Care set">
+          <div class="catalog-item__action">
+            <button class="add" type="button">Quick Add</button>
+          </div>
         </li>
       </ul>
-    </section>
-    <div class="divider">
-      <b>“The shampoo bar works so freaking good and smells amazing!”</b>
-    </div>
-    <section class="plea container">
-      <div class="plea__grid">
-        <img src="./img/help.jpg" alt="">
-        <div class="plea__content">
-          <div class="plea__text">
+      <div class="divider"></div>
+      <div class="home-blockquote">
+        <blockquote>“The shampoo bar works so freaking good and smells amazing!”</blockquote>
+      </div>
+      <div class="divider"></div>
+      <div class="article-item">
+        <div class="article-item__img">
+          <img loading="lazy" src="./img/help.jpg" alt="">
+        </div>
+        <div class="article-item__content">
+          <div class="article-item__text">
             <p>In one year, you’ll save our planet from up to 5 pounds of single-use plastic waste.</p>
-            <p>Our collective plastic <br>reduction grows over time, creating quantifiable and meaningful impact.</p>
+            <p>Our collective plastic reduction&nbsp;grows&nbsp;over time, creating quantifiable and meaningful
+              impact.</p>
           </div>
-          <a class="lowercase" href="#">Here’s How</a>
+          <a class="article-item__action lowercase" href="#">Here’s How</a>
         </div>
       </div>
-    </section>
-    <div class="routine">
-      <blockquote>One routine can help shape our planet's future — <i>yours</i>.</blockquote>
-      <a href="#">Shop Now</a>
     </div>
-    <div class="divider container"></div>
+    <div class="home-routine">
+      <div class="container">
+        <blockquote>One routine can help shape our planet's future — <i>yours</i>.</blockquote>
+        <a href="#">Shop Now</a>
+      </div>
+    </div>
+    <div class="divider"></div>
   </main>
   <footer class="page__footer footer">
     <div class="container">
